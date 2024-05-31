@@ -14,6 +14,10 @@ development:
 test:
   <<: *default
   database: library_management_system_test
+  username: postgres
+  password: password
+  host: <%= ENV.fetch("DATABASE_HOST") %>
+  port: <%= ENV.fetch("DATABASE_PORT") %>
 
 production:
   <<: *default
