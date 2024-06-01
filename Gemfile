@@ -4,9 +4,12 @@ source 'https://rubygems.org'
 
 gem 'bootsnap', require: false
 gem 'devise', '~> 4.9'
+gem 'devise-jwt', '~> 0.11.0'
 gem 'dotenv', '~> 3.1'
+gem 'jsonapi-serializer', '~> 2.2'
 gem 'pg', '~> 1.1'
 gem 'puma', '>= 5.0'
+gem 'rack-cors', '~> 2.0'
 gem 'rails', '~> 7.1.3', '>= 7.1.3.3'
 gem 'tzinfo-data', platforms: %i[windows jruby]
 ruby '3.3.2'
