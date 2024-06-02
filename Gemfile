@@ -14,6 +14,10 @@ gem 'rails', '~> 7.1.3', '>= 7.1.3.3'
 gem 'tzinfo-data', platforms: %i[windows jruby]
 ruby '3.3.2'
 
+group :development do
+  gem 'annotate', '~> 3.2'
+end
+
 group :development, :test do
   gem 'debug', platforms: %i[mri windows]
   gem 'factory_bot_rails', '~> 6.4'
