@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'up' => 'rails/health#show', as: :rails_health_check
 
   devise_for :users,
-             path: '',
+             path: 'auth',
              path_names: {
                sign_in: 'login',
                sign_out: 'logout',
@@ -14,4 +14,10 @@ Rails.application.routes.draw do
                sessions: 'users/sessions',
                registrations: 'users/registrations'
              }
+
+  get 'auth/get_user_role_types', to: 'roles#index'
+
+  namespace :auth do
+    get 'validate_token', to: 'authentication#validate_token'
+  end
 end

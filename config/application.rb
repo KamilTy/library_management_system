@@ -44,14 +44,14 @@ module LibraryManagementSystem
     config.api_only = true
 
     # Configuration for CORS
-    config.middleware.insert_before 0, Rack::Cors do
-      allow do
-        origins '*' # Update this to restrict to your frontend's domain in production
-        resource '*',
-                 headers: :any,
-                 methods: %i[get post put patch delete options head]
-      end
-    end
+    # config.middleware.insert_before 0, Rack::Cors do
+    #   allow do
+    #     origins '*' # Update this to restrict to your frontend's domain in production
+    #     resource '*',
+    #              headers: :any,
+    #              methods: %i[get post put patch delete options head]
+    #   end
+    # end
 
     # Enabled the session store for api_only application
     config.session_store :cookie_store, key: '_interslice_session'

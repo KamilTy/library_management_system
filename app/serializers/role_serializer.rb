@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class UserSerializer
+class RoleSerializer
   include JSONAPI::Serializer
-  attributes :id, :email, :name
+  attributes :id, :name
 end
