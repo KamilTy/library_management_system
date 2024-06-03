@@ -20,4 +20,12 @@ Rails.application.routes.draw do
   namespace :auth do
     get 'validate_token', to: 'authentication#validate_token'
   end
+
+  namespace :api do
+    namespace :v1 do
+      resources :authors
+      resources :books
+      resources :genres
+    end
+  end
 end

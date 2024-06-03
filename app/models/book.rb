@@ -6,6 +6,13 @@ class Book < ApplicationRecord
   has_many :book_copies, dependent: :destroy
 
   validates_presence_of :title
+  validate :must_have_at_least_one_author
+
+  private
+
+  def must_have_at_least_one_author
+    errors.add(:authors, 'must exist') if authors.empty?
+  end
 end
 
 # == Schema Information
